@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let profiles = ['john', 'tolu', 'ade', 'matt']
+        ansa = prompt('what is your name')
+        let msg = ''
+        for(profile in profiles){
+            //check += profiles[profile]
+            switch (ansa) {
+               case profiles[profile]:
+                   msg = true,
+                   console.log('welcome ' + profiles[profile])
+                   break;
+                default:
+                   console.log("unknown user")
+                   break;
+            }
+            if(profiles[profile] == ansa){
+                break;
+            }
+
+        }
+    </script>
+</body>
+</html>
