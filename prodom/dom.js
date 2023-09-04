@@ -29,3 +29,13 @@ console.log(table_template)
 let caption = document.getElementById('cap')
 caption.style.backgroundColor = 'red';
 
+function imageGenerator(){
+    let img = document.createElement('img');
+    img.src = "sample.jpg"
+    img.setAttribute('width', '20%')
+    img.setAttribute('height', '100vh')
+    // img.style.width = '20%'
+    let imgCont = document.getElementById('imgCont')
+    imgCont.classList.add('section')
+    imgCont.appendChild(img)
+}
