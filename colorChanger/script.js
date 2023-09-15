@@ -4,19 +4,18 @@
 // })
 
 function greenColor(){
-    let colorBank = JSON.parse(localStorage.getItem('objColor'));
-    // console.log(colorBank['background'])
-    let objColor = {
-        'background': 'green'
+    let colorRank = JSON.parse(localStorage.getItem('colorRank'));
+    bgColor = {
+        background: 'green'
     }
-    if(colorBank == null || colorBank == undefined){
-        localStorage.setItem('objColor', JSON.stringify(objColor))
-    }else{
-        // document.body.style.backgroundColor = colorBank['background']
-        alert('there is color');
+    if(colorRank == null || colorRank == undefined){
+        document.body.style.backgroundColor = 'blue'
     }
-    document.body.style.backgroundColor = objColor['background']
-    
+
+        alert('there is color')
+        document.body.style.backgroundColor = bgColor['background']
+        localStorage.setItem('colorRank', JSON.stringify(bgColor))
+        // document.body.style.backgroundColor = objColor['background']
 }
 
 // let red = document.getElementById('red');
