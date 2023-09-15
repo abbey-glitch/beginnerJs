@@ -1,13 +1,14 @@
 let contentCont = document.getElementById("wrapper")
 let note_template = document.createElement('form')
 note_template.setAttribute('onclick', 'remAttr()')
+note_template.setAttribute('action', "javascript:void()")
 note_template.classList.add('formCont')
 note_template.innerHTML = `<div id='noteCont'>
                                 <fieldset>
                                     <legend>Note App</legend>
                                      <fieldset>
                                     <legend>Title</legend>
-                                    <input type="text" placeholder="enter a note title">
+                                    <input type="text" id="noteTitle" placeholder="enter a note title">
                                 </fieldset>
                                 <fieldset>
                                     <legend>Content</legend>
@@ -19,7 +20,7 @@ note_template.innerHTML = `<div id='noteCont'>
                                      <input type="text" placeholder="name of author">
                                 </fieldset>
                                 <fieldset>
-                                      <button type="submit">Save</button>
+                                      <button type="submit" id="save">Save</button>
                                       <button type="reset">Reset</button>
                                 </fieldset>
                                 </fieldset>
@@ -29,6 +30,11 @@ note_template.innerHTML = `<div id='noteCont'>
 // attach the html template to the stactic docs
 contentCont.appendChild(note_template)
 
+// set color on the btn element
+let saveBtn = document.querySelector("#save")
+saveBtn.setAttribute('id', 'set')
+// call a function to save the note once the save btn is clicked
+saveBtn.setAttribute('onclick', 'saveNote()')
 
 // create a function that remove an attribute from your static page
 
@@ -37,4 +43,9 @@ function remAttr(){
         note_template.removeAttribute('class')
     }
     note_template.setAttribute('id', 'add') 
+}
+
+function saveNote(){
+   let note_title = document.getElementById('noteTitle').value
+   console.log(note_title)
 }

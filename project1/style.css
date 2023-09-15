@@ -56,3 +56,8 @@ my style
     background-color: purple;
     color:aliceblue;
 }
+#set{
+    border: .1rem dashed black;
+    background-color: black;
+    color: white;
+}
