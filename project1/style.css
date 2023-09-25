@@ -61,3 +61,10 @@ my style
     background-color: black;
     color: white;
 }
+.error{
+	background-color: red;
+	border: .1rem dashed green;
+}
+.success{
+	background-color: green;
+}

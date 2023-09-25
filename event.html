@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+
+    </div>
+    <pre id="output">
+        <button id="btn">click me</button>
+    </pre>
+    <script>
+       let btn = document.getElementById('btn')
+       let raper = document.getElementById('wrapper')
+       let wrap = document.getElementById('output')
+       function lister(e){
+        console.log(e.currentTarget.tagName)
+       }
+        btn.addEventListener('click', lister, true)
+        wrap.addEventListener('click', lister, true)
+        raper.addEventListener('click', lister)
+    </script>
+</body>
+</html>
